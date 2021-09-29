@@ -1,0 +1,14 @@
+{
+  "kind": "singleType",
+  "collectionName": "titles",
+  "info": {
+    "name": "title"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {}
+}
