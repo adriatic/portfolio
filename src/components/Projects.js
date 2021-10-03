@@ -4,27 +4,18 @@ import Project from "./Project";
 import { Link } from "gatsby";
 
 const Projects = ({ projects, title, showLink }) => {
-  console.log("title=", title);
-  console.log("showLink=", showLink);
-  console.log("projects=", projects);
-
   return (
     <section className="section projects">
       <Title title={title} />
-      {projects.map((project, index) => {
-        return (
-          <Project
-            key={project.id}
-            index={index}
-            description={project.description}
-            github={project.github}
-            stack={project.stack}
-            url={project.url}
-            image={project.image}
-            slug={project.slug}
-          />
-        );
-      })}
+
+      <div className="section-center projects-center">
+        {projects.map((project, index) => {
+          return (
+            <Project key={project.id} index={index} {...project}></Project>
+          );
+        })}
+      </div>
+
       {showLink && (
         <Link to="/projects" className="btn center-btn">
           projects

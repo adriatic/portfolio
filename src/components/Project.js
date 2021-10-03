@@ -9,14 +9,17 @@ const Project = ({
   github,
   stack,
   url,
-  img,
+  image,
   index,
   slug,
 }) => {
-  console.log("index: ", index, "image: ", img);
   return (
     <article className="project">
-      <GatsbyImage image={getImage(img)} className="project-img" alt={title} />
+      <GatsbyImage
+        image={getImage(image)}
+        className="project-img"
+        alt={title}
+      />
     </article>
   );
 };
